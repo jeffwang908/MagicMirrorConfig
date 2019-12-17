@@ -91,7 +91,7 @@ Module.register("newsfeed",{
 		var wrapper = document.createElement("div");
 
 		if (this.config.feedUrl) {
-			wrapper.className = "small bright";
+			wrapper.className = "large bright";
 			wrapper.innerHTML = this.translate("configuration_changed");
 			return wrapper;
 		}
@@ -105,7 +105,7 @@ Module.register("newsfeed",{
 			// this.config.showFullArticle is a run-time configuration, triggered by optional notifications
 			if (!this.config.showFullArticle && (this.config.showSourceTitle || this.config.showPublishDate)) {
 				var sourceAndTimestamp = document.createElement("div");
-				sourceAndTimestamp.className = "newsfeed-source light small dimmed";
+				sourceAndTimestamp.className = "newsfeed-source light medium bright";
 
 				if (this.config.showSourceTitle && this.newsItems[this.activeItem].sourceTitle !== "") {
 					sourceAndTimestamp.innerHTML = this.newsItems[this.activeItem].sourceTitle;
@@ -168,7 +168,7 @@ Module.register("newsfeed",{
 
 			if(!this.config.showFullArticle){
 				var title = document.createElement("div");
-				title.className = "newsfeed-title bright medium light" + (!this.config.wrapTitle ? " no-wrap" : "");
+				title.className = "newsfeed-title bright large light" + (!this.config.wrapTitle ? " no-wrap" : "");
 				title.innerHTML = this.newsItems[this.activeItem].title;
 				wrapper.appendChild(title);
 			}
