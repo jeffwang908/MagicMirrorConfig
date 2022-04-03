@@ -22,7 +22,7 @@ var config = {
 	                                                       // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
 
 	language: "en",
-	timeFormat: 24,
+	timeFormat: 12,
 	units: "metric",
 
 	modules: [
@@ -36,8 +36,32 @@ var config = {
 		{
 			module: "clock",
 			position: "top_center",
-			timeFormat: "12"
+			timeFormat: 12
 		},
+
+//{
+//module: 'MMM-Instagram2020',
+//position: 'top_center',
+//header: 'MMM-Instagram2020',
+//config: {
+//  client_id: '579414629426667', // Facebook Instagram App ID
+//  client_secret: '0615bc80b616918c6b25ae43fb2d9103', // Facebook Instagram App Secret
+//  redirect_uri: 'https://localhost',
+//  auth_code: 'AQC89ZIhlTP4UE_yT5V7pzovbv3ZVfWY0KUhFIm_KesJ4zYhjuNNd_rOJcgv0tUIjXcDjeQUAOYQEGB_DhkrTT5TJFSN7dNgCn5OOz0k79sv5INHFJ8lrdFarltO3Q4wWgyrLw0bhgbmE2XEhyx3V5zGlbDzk5ooKigbw46w6dmeJCufHJFfghKwETnhuzE9VUP5yOd5Wc3BkiyqOrf2dh6v1iev-CGreLTd5AxqKzCdwQ',
+//  animationSpeed: 1000,
+//  updateInterval: 30000,
+//}},
+	//disabled this because too heavy on raspberry pi
+		//{
+	//module: "MMM-RandomYouTubePlayer", 
+	//position: "top_center",	      // This can be any of the regions...
+	//config: {
+	    //list: "PLV1U3bpkKUzXTFgcSx9Nxk41PAO3XKVeK",     // See Configuration Options below...
+            //height: 480,
+           // width: 720,
+	   // showinfo: true,
+	  //  }
+	// },
 		{
   module: "MMM-NowPlayingOnSpotify",
   position: "right",
@@ -58,7 +82,7 @@ var config = {
   config: {
     apikey: "7b9ab2ed762dd2076e37883992e30fbe",
     latitude: "37.7749",
-    longitude: "122.4194",      
+    longitude: "-122.4194",      
     iconset: "3c",
     concise: true,
     units: "us",
